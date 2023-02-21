@@ -10,7 +10,7 @@ import retrofit2.http.GET
 
 interface GetInterface {
 
-    @GET(BASE_URL)
+    @GET("bank-account.json")
     suspend fun getData(): AccountResponse
 
 }

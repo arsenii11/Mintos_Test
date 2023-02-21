@@ -11,11 +11,6 @@ object RetrofitInstance {
     private val retrofit by lazy {
         Retrofit.Builder()
             .baseUrl(Links.BASE_URL)
-            .client(OkHttpClient.Builder().also { client ->
-                val logging = HttpLoggingInterceptor()
-                logging.setLevel(HttpLoggingInterceptor.Level.BODY)
-                client.addInterceptor(logging)
-            }.build())
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
