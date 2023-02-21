@@ -23,13 +23,13 @@
             android:text="Currency"
             android:paddingHorizontal="@dimen/margin_block"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+            app:layout_constraintTop_toBottomOf="@+id/Currency_Tick" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/Currency_Tick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="EUR"
+            android:text="XXX"
             android:layout_marginTop="@dimen/margin_block"
             android:paddingHorizontal="@dimen/margin_block"
             android:textColor="@color/black"

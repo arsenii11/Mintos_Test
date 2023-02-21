@@ -49,10 +49,4 @@ object Utility {
         this.view.setBackgroundColor(color)
         return this
     }
-
-    fun View.visible(isVisible: Boolean) {
-        visibility = if (isVisible) View.VISIBLE else View.GONE
-    }
-
-
 }
