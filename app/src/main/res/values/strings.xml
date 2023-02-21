@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Mintos Test</string>
+    <string name="deposit_funds">Deposit funds</string>
 </resources>
