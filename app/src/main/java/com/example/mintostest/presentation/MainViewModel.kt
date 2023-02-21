@@ -1,12 +1,15 @@
 package com.example.mintostest.presentation
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
-import com.example.mintostest.domain.ShowDataUseCase
 import javax.inject.Inject
 
 class MainViewModel @Inject constructor(
-    private val useCase: ShowDataUseCase,
 ) : ViewModel() {
+
+    fun method() {
+        Log.d("MainViewModel", "$this")
+    }
 
 
 }

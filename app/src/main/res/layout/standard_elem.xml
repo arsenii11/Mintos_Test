@@ -8,7 +8,7 @@
     android:layout_marginHorizontal="@dimen/margin_block">
 
     <TextView
-        android:id="@+id/textElem1"
+        android:id="@+id/header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textElem2"
+        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="BHRJBVRJH"

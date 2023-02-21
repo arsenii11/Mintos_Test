@@ -11,16 +11,37 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar"/>
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="75dp">
 
-        <include
-            android:id="@+id/investor_id"
-            layout="@layout/standard_elem" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Currency"
+            android:paddingHorizontal="@dimen/margin_block"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EUR"
+            android:layout_marginTop="@dimen/margin_block"
+            android:paddingHorizontal="@dimen/margin_block"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-    </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/transfer_block"
@@ -50,13 +71,17 @@
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <include layout="@layout/standard_elem" />
+            <include android:id="@+id/IBAN_block"
+                layout="@layout/standard_elem" />
 
-            <include layout="@layout/standard_elem" />
+            <include android:id="@+id/Swift_block"
+                layout="@layout/standard_elem" />
 
-            <include layout="@layout/standard_elem" />
+            <include android:id="@+id/Beneficiary_block"
+                layout="@layout/standard_elem" />
 
-            <include layout="@layout/standard_elem" />
+            <include android:id="@+id/Beneficiary_address_block"
+                layout="@layout/standard_elem" />
         </LinearLayout>
 
         <LinearLayout
@@ -102,6 +127,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
 </androidx.appcompat.widget.LinearLayoutCompat>
