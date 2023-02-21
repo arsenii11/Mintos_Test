@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <padding name="padding_left_std">30sp</padding>
+</resources>
