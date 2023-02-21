@@ -1,15 +1,23 @@
 package com.example.mintostest.presentation
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import com.example.mintostest.data.model.AccountResponse
+import com.example.mintostest.data.repository.Repository
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class MainViewModel @Inject constructor(
-) : ViewModel() {
+class MainViewModel (private val repository: Repository): ViewModel(){
 
-    fun method() {
-        Log.d("MainViewModel", "$this")
+    val myResponse: MutableLiveData<AccountResponse> = MutableLiveData()
+
+    fun getData(){
+        viewModelScope.launch {
+            val response: AccountResponse = repository.getAccountResponse()
+            myResponse.value= response
+        }
     }
-
 
 }

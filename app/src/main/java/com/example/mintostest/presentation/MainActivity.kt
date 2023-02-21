@@ -2,10 +2,12 @@ package com.example.mintostest.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewModelScope
-import com.example.mintostest.R
+
 import com.example.mintostest.databinding.ActivityMainBinding
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -32,10 +34,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
        /* viewModel.method()*/
 
+        load()
+
         binding.IBANBlock.header.text = "Beneficiary bank account number / IBAN"
         binding.SwiftBlock.header.text = "Beneficiary bank SWIFT / BIC code"
         binding.BeneficiaryBlock.header.text = "Beneficiary name"
         binding.BeneficiaryAddressBlock.header.text = "Beneficiary bank address"
         binding.investorId.header.text = "Add this information to payment details"
+
+
+
+
     }
+
+   fun load(){}
+
 }

@@ -1,4 +1,4 @@
-package com.example.mintostest.data
+package com.example.mintostest.data.util
 
 class Links {
     companion object{
