@@ -9,16 +9,18 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbar">
-    </include>
+        layout="@layout/toolbar"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="75dp">
 
+        <include
+            android:id="@+id/investor_id"
+            layout="@layout/standard_elem" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/transfer_block"
@@ -29,13 +31,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/custom_curved_background"
             android:backgroundTint="@color/white"
             android:orientation="vertical"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="30dp"
             app:layout_constraintTop_toBottomOf="@+id/payment_det_block"
             tools:layout_editor_absoluteX="30dp">
+
+            <TextView
+                android:id="@+id/Acme_binding"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_block"
+                android:layout_marginVertical="10sp"
+                android:text="Acme Bank"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
             <include layout="@layout/standard_elem" />
 
@@ -46,7 +59,7 @@
             <include layout="@layout/standard_elem" />
         </LinearLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/payment_det_block"
             android:layout_width="match_parent"
             android:layout_height="56dp"
@@ -56,18 +69,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <include
+                android:id="@+id/investor_id"
+                layout="@layout/standard_elem" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="30sp"
             android:layout_marginTop="16dp"
             android:text="@string/bank_transfer"
             android:textColor="@color/black"
             android:textSize="22sp"
-            android:layout_marginLeft="30sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
