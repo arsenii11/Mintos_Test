@@ -1,7 +1,6 @@
-package com.example.mintostest.data.repository
+package com.example.mintostest.domain
 
 import com.example.mintostest.data.api.RetrofitInstance
-import com.example.mintostest.data.model.AccountResponse
 import retrofit2.Response
 import retrofit2.http.POST
 

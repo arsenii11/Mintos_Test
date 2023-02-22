@@ -7,19 +7,13 @@ import android.util.Log
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewmodel.viewModelFactory
 import com.example.mintostest.R
-import com.example.mintostest.data.repository.Repository
+import com.example.mintostest.domain.Repository
 
 import com.example.mintostest.databinding.ActivityMainBinding
 import com.example.mintostest.utilities.Utility.background
 import com.example.mintostest.utilities.Utility.isNetworkAvailable
 import com.google.android.material.snackbar.Snackbar
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 

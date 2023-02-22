@@ -1,7 +1,8 @@
 package com.example.mintostest.data.api
 
-import com.example.mintostest.data.model.AccountResponse
+
 import com.example.mintostest.data.util.Links.Companion.BASE_URL
+import com.example.mintostest.domain.AccountResponse
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Response
