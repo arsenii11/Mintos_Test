@@ -1,4 +1,4 @@
-package com.example.mintostest.data
+package com.example.mintostest.data.model
 
 data class AccountData(
     val bank: String,

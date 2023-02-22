@@ -3,7 +3,7 @@ package com.example.mintostest.presentation
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mintostest.data.AccountResponse
+import com.example.mintostest.data.model.AccountResponse
 import com.example.mintostest.domain.DataUseCase
 import kotlinx.coroutines.launch
 import retrofit2.Response

@@ -1,4 +1,4 @@
-package com.example.mintostest.data
+package com.example.mintostest.data.model
 
 import com.google.gson.annotations.SerializedName
 
