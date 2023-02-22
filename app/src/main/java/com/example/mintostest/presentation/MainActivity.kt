@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("UseRequireInsteadOfGet")
     fun showSnackbar(text: String, binding: ActivityMainBinding) {
-        Snackbar.make(binding.root, text, Snackbar.LENGTH_LONG)
+        Snackbar.make(binding.root, text, Snackbar.LENGTH_INDEFINITE)
             .setTextColor(ContextCompat.getColor(this, R.color.white))
             .background(ContextCompat.getColor(this!!, R.color.red))
             .show()
