@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mintostest.R
-import com.example.mintostest.domain.Repository
+import com.example.mintostest.data.repository.RepositoryImpl
 
 import com.example.mintostest.databinding.ActivityMainBinding
 import com.example.mintostest.domain.DataUseCase
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         initStaticTextViews(binding)
 
-        val repository = Repository()
+        val repository = RepositoryImpl()
         val dataUseCase = DataUseCase(repository)
         val viewModelFactory = MainViewModelFactory(dataUseCase)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
