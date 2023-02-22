@@ -8,7 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mintostest.R
-import com.example.mintostest.domain.Repository
+import com.example.mintostest.data.repository.Repository
 
 import com.example.mintostest.databinding.ActivityMainBinding
 import com.example.mintostest.utilities.Utility.background

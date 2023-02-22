@@ -2,7 +2,7 @@ package com.example.mintostest.presentation
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.mintostest.domain.Repository
+import com.example.mintostest.data.repository.Repository
 
 class MainViewModelFactory(private val repository: Repository):
     ViewModelProvider.Factory {
