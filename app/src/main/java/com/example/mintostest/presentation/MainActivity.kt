@@ -7,45 +7,44 @@ import android.util.Log
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.mintostest.DI.DaggerApplicationComponent
 import com.example.mintostest.R
 import com.example.mintostest.data.repository.RepositoryImpl
+import com.example.mintostest.data.repository.RepositoryImpl_Factory.create
 
 import com.example.mintostest.databinding.ActivityMainBinding
 import com.example.mintostest.domain.DataUseCase
+import com.example.mintostest.presentation.MainViewModelFactory_Factory.create
 import com.example.mintostest.utilities.Utility.background
 import com.example.mintostest.utilities.Utility.isNetworkAvailable
 import com.google.android.material.snackbar.Snackbar
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
-    /*@Inject
-    lateinit var viewModelFactory: ViewModelFactory
+
+
+    @Inject
+    lateinit var viewModelFactory: MainViewModelFactory
 
     private val viewModel by lazy {
         ViewModelProvider(this,  viewModelFactory)[MainViewModel::class.java ]
-    }*/
+    }
 
-    /*@Inject
-    lateinit var viewModel:MainViewModel*/
 
-    /* private val component by lazy {
-         (application as ExampleApp).component
-     }*/
+    private val component = DaggerApplicationComponent.create()
 
-    private lateinit var viewModel: MainViewModel
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        component.inject(this)
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         initStaticTextViews(binding)
 
-        val repository = RepositoryImpl()
-        val dataUseCase = DataUseCase(repository)
-        val viewModelFactory = MainViewModelFactory(dataUseCase)
-        viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
 
 
         if (isNetworkAvailable(this)){
@@ -75,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("UseRequireInsteadOfGet")
     fun showSnackbar(text: String, binding: ActivityMainBinding) {
-        Snackbar.make(binding.root, text, Snackbar.LENGTH_INDEFINITE)
+        Snackbar.make(binding.root, text, Snackbar.LENGTH_LONG)
             .setTextColor(ContextCompat.getColor(this, R.color.white))
             .background(ContextCompat.getColor(this!!, R.color.red))
             .show()
