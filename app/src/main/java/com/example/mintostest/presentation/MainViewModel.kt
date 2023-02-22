@@ -7,8 +7,9 @@ import com.example.mintostest.data.model.AccountResponse
 import com.example.mintostest.domain.DataUseCase
 import kotlinx.coroutines.launch
 import retrofit2.Response
+import javax.inject.Inject
 
-class MainViewModel (private val repository: DataUseCase): ViewModel(){
+class MainViewModel @Inject constructor (private val repository: DataUseCase): ViewModel(){
 
     val myResponse: MutableLiveData<Response<AccountResponse>> = MutableLiveData()
 

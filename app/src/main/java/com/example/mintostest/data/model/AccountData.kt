@@ -1,6 +1,8 @@
 package com.example.mintostest.data.model
 
-data class AccountData(
+import javax.inject.Inject
+
+data class AccountData @Inject constructor(
     val bank: String,
     val beneficiaryBankAddress: String,
     val beneficiaryName: String,
