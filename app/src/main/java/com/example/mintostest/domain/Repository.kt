@@ -1,7 +1,7 @@
-package com.example.mintostest.data.repository
+package com.example.mintostest.domain
 
 import com.example.mintostest.data.api.RetrofitInstance
-import com.example.mintostest.domain.AccountResponse
+import com.example.mintostest.data.AccountResponse
 import retrofit2.Response
 
 class Repository {

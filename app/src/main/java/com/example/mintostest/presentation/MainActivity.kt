@@ -8,9 +8,10 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.mintostest.R
-import com.example.mintostest.data.repository.Repository
+import com.example.mintostest.domain.Repository
 
 import com.example.mintostest.databinding.ActivityMainBinding
+import com.example.mintostest.domain.DataUseCase
 import com.example.mintostest.utilities.Utility.background
 import com.example.mintostest.utilities.Utility.isNetworkAvailable
 import com.google.android.material.snackbar.Snackbar
@@ -42,7 +43,8 @@ class MainActivity : AppCompatActivity() {
         initStaticTextViews(binding)
 
         val repository = Repository()
-        val viewModelFactory = MainViewModelFactory(repository)
+        val dataUseCase = DataUseCase(repository)
+        val viewModelFactory = MainViewModelFactory(dataUseCase)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
 
 
