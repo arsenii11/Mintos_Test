@@ -13,8 +13,6 @@ import com.example.mintostest.data.repository.RepositoryImpl
 import com.example.mintostest.data.repository.RepositoryImpl_Factory.create
 
 import com.example.mintostest.databinding.ActivityMainBinding
-import com.example.mintostest.domain.DataUseCase
-import com.example.mintostest.presentation.MainViewModelFactory_Factory.create
 import com.example.mintostest.utilities.Utility.background
 import com.example.mintostest.utilities.Utility.isNetworkAvailable
 import com.google.android.material.snackbar.Snackbar
@@ -82,11 +80,11 @@ class MainActivity : AppCompatActivity() {
 
     //Because I'm using a view templates in layout I've to fill TextViews in code
     private fun initStaticTextViews(binding: ActivityMainBinding) {
-        binding.IBANBlock.header.text = "Beneficiary bank account number / IBAN"
-        binding.SwiftBlock.header.text = "Beneficiary bank SWIFT / BIC code"
-        binding.BeneficiaryBlock.header.text = "Beneficiary name"
-        binding.BeneficiaryAddressBlock.header.text = "Beneficiary bank address"
-        binding.investorId.header.text = "Add this information to payment details"
+        binding.IBANBlock.header.text = R.string.iban_header.toString()
+        binding.SwiftBlock.header.text = R.string.swift_header.toString()
+        binding.BeneficiaryBlock.header.text = R.string.beneficiary_name_header.toString()
+        binding.BeneficiaryAddressBlock.header.text = R.string.bank_address_header.toString()
+        binding.investorId.header.text = R.string.investor_id_header.toString()
     }
 
 }

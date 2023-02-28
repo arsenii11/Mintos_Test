@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">Mintos Test</string>
     <string name="deposit_funds">Deposit funds</string>
-    <string name="bank_transfer_desc">Transfer money from your bank account to your Mintos account.</string>
     <string name="bank_transfer">Bank transfer</string>
+    <string name="bank_transfer_desc">Transfer money from your bank account to your Mintos account.</string>
+    <string name="iban_header">Beneficiary bank account number / IBAN</string>
+    <string name="swift_header">Beneficiary bank SWIFT / BIC code</string>
+    <string name="beneficiary_name_header">Beneficiary name</string>
+    <string name="bank_address_header">Beneficiary bank address</string>
+    <string name="investor_id_header">Add this information to payment details</string>
 </resources>
