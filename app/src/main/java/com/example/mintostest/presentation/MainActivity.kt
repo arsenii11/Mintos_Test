@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.myResponse.observe(this, Observer { response ->
             if(response.isSuccessful){
+
             Log.d("response_test", response.toString())
             binding.CurrencyTick.text = response.body()?.rsp?.currency
             binding.IBANBlock.info.text = response.body()?.rsp?.iban
