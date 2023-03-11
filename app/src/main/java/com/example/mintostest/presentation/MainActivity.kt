@@ -52,7 +52,6 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.myResponse.observe(this, Observer { response ->
             if(response.isSuccessful){
-
             Log.d("response_test", response.toString())
             binding.CurrencyTick.text = response.body()?.rsp?.currency
             binding.IBANBlock.info.text = response.body()?.rsp?.iban
@@ -75,17 +74,17 @@ class MainActivity : AppCompatActivity() {
     fun showSnackbar(text: String, binding: ActivityMainBinding) {
         Snackbar.make(binding.root, text, Snackbar.LENGTH_LONG)
             .setTextColor(ContextCompat.getColor(this, R.color.white))
-            .background(ContextCompat.getColor(this!!, R.color.red))
+            .background(ContextCompat.getColor(this, R.color.red))
             .show()
     }
 
     //Because I'm using a view templates in layout I've to fill TextViews in code
     private fun initStaticTextViews(binding: ActivityMainBinding) {
-        binding.IBANBlock.header.text = R.string.iban_header.toString()
-        binding.SwiftBlock.header.text = R.string.swift_header.toString()
-        binding.BeneficiaryBlock.header.text = R.string.beneficiary_name_header.toString()
-        binding.BeneficiaryAddressBlock.header.text = R.string.bank_address_header.toString()
-        binding.investorId.header.text = R.string.investor_id_header.toString()
+        binding.IBANBlock.header.text = getString(R.string.iban_header)
+        binding.SwiftBlock.header.text = getString(R.string.swift_header)
+        binding.BeneficiaryBlock.header.text = getString(R.string.beneficiary_name_header)
+        binding.BeneficiaryAddressBlock.header.text = getString(R.string.bank_address_header)
+        binding.investorId.header.text = getString(R.string.investor_id_header)
     }
 
 }
